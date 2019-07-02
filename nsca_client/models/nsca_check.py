@@ -19,7 +19,7 @@ class NscaCheck(models.Model):
     server_id = fields.Many2one(
         'nsca.server', string=u"Server", required=True)
     service = fields.Char(u"Service", required=True)
-    nsca_model = fields.Char(u"Model")
+    nsca_model = fields.Char("NSCA Model")
     nsca_function = fields.Char(u"Method")
     nsca_args = fields.Char(u"Arguments")
     allow_void_result = fields.Boolean(
