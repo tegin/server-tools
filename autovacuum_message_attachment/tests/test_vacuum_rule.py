@@ -29,7 +29,7 @@ class TestVacuumRule(common.TransactionCase):
 
     def setUp(self):
         super(TestVacuumRule, self).setUp()
-        self.registry.enter_test_mode(self.env.cr)
+        self.registry.enter_test_mode()
         self.env = api.Environment(self.registry.test_cr, self.env.uid,
                                    self.env.context)
         self.subtype = self.env.ref('mail.mt_comment')
