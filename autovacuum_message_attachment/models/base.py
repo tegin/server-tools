@@ -9,5 +9,5 @@ class Base(models.AbstractModel):
 
     attachment_ids = fields.One2many(
         'ir.attachment', 'res_id', string='Attachments',
-        domain=lambda self: [('model', '=', self._name)], auto_join=True
+        domain=lambda self: [('res_model', '=', self._name)], auto_join=True
     )

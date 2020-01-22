@@ -53,6 +53,7 @@ class VacuumRule(models.Model):
     model = fields.Char(
         readonly=True,
         compute='_get_model_id',
+        string='Model code'
     )
     message_type = fields.Selection([
         ('email', 'Email'),
